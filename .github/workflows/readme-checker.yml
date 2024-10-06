@@ -11,5 +11,5 @@ jobs:
     runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v2
-          if: ${{ hashFiles('README.md') != '' }}
-          run: echo "File exists"
+          if: ${{ ! hashFiles('README.md') != '' }}
+          run: exit 1
