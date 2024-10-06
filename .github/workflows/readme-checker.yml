@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - testing-1
 
 jobs:
   readme-checker:
@@ -13,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Readme Checker!
         run: |
-            ls -a 
+          ls -a 
           if [ ! -f README.md ]; then
             exit 1  
           fi
