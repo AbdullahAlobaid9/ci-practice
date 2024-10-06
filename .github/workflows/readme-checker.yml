@@ -11,8 +11,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: python linter!
-      - uses: github/super-linter@v4
+        uses: github/super-linter@v4
         env:
+          VALIDATE_ALL_CODEBASE: true
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          validate_python: true
+          VALIDATE_PYTHON: true
