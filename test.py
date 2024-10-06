@@ -1,7 +1,6 @@
 
+print("wrong print")
 
-    print "wrong print"
 
-def help()
-    
-    
+def help():
+    x = 10
