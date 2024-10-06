@@ -11,5 +11,9 @@ jobs:
     runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v2
-          if: ${{ ! hashFiles('README.md') != '' }}
-          run: exit 0
+        - name: Readme Checker! 
+          run: |
+            ls -a 
+            if [ ! -f README.md ]; then
+              exit 1  
+            fi
